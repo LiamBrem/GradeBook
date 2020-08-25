@@ -1,9 +1,8 @@
 package com.liam;
 
-import java.io.File;
+import java.io.*;
 import java.util.Scanner;
-import java.io.FileWriter;
-import java.io.IOException;
+
 
 public class Admin {
     public Admin(){
@@ -33,15 +32,22 @@ public class Admin {
 
 
         try {
-            FileWriter fw = new FileWriter("Test");
-            fw.write("This is a test");
+            String fileName = "students.txt";
+
+            FileWriter fw = new FileWriter(fileName, true);
+            fw.write(firstName);
+            fw.write("\n");
             fw.close();
+            System.out.println("successfully wrote to the file");
         } catch (IOException e){
-            e.printStackTrace();
+            System.out.println("error");
+
         }
 
         Student m = new Student(input, firstName, lastName, dob);
         System.out.println(firstName + ' ' + lastName + ' ' + dob);
+
+        Main.main(null);
 
         //add ability to go back
         //write students to a text file
