@@ -4,6 +4,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        mainNavigation();
+    }
+
+    public static void divide(){
+        System.out.println("+++++++++++++++++");
+    }
+
+    public static void mainNavigation(){
         Scanner input = new Scanner(System.in);
         System.out.println("Who are you (type: \"student\" or \"teacher\" or \"admin\")");
 
@@ -25,10 +33,6 @@ public class Main {
             System.out.println("please type: \"student\" or \"teacher\" or \"admin\"");
             main(null);
         }
-    }
-
-    public static void divide(){
-        System.out.println("+++++++++++++++++");
     }
 
     public static void studentPanel(){
